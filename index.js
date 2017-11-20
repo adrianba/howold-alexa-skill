@@ -1,6 +1,7 @@
-var Alexa = require("alexa-sdk");
+const Alexa = require("alexa-sdk");
+const APP_ID = "amzn1.ask.skill.cfd3f370-315a-46fb-94d3-7b9c4cb7414e";
 
-var handlers = {
+const handlers = {
   LaunchRequest: function() {
     this.emit("AMAZON.HelpIntent");
   },
@@ -14,6 +15,7 @@ var handlers = {
 
 exports.handler = function(event, context, callback) {
   let alexa = Alexa.handler(event, context, callback);
+  alexa.APP_ID = APP_ID;
   alexa.registerHandlers(handlers);
   alexa.execute();
 };

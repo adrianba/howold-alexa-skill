@@ -2,7 +2,13 @@ const Alexa = require("alexa-sdk");
 
 const handlers = {
   LaunchRequest: function() {
-    this.emit(":tell", "This is the Alexa How Old skill.");
+    this.emit("AMAZON.HelpIntent");
+  },
+  "AMAZON.HelpIntent": function() {
+    this.emit(":tell", "This is the Alexa How Old skill. You can say, How old is Bob.");
+  },
+  HowOldIntent: function() {
+    this.emit(":tell", "I'm not sure.");
   }
 };
 

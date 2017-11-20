@@ -1,6 +1,6 @@
-const Alexa = require("alexa-sdk");
+var Alexa = require("alexa-sdk");
 
-const handlers = {
+var handlers = {
   LaunchRequest: function() {
     this.emit("AMAZON.HelpIntent");
   },

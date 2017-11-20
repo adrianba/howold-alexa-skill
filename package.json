@@ -2,7 +2,7 @@
   "name": "alexa-howold",
   "version": "1.0.0",
   "description": "An Alexa skill for calculating ages.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
